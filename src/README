@@ -1,0 +1,41 @@
+# Copyright Chirac Alexandru-Stefan 333CA
+
+TEMA 2 - APD
+
+1. Initializare
+
+La inceput fiecare proces isi citeste fisierul de intrare si salveaza 
+fisierele detinute in mapul "files", iar fisierele pe care si le doreste
+in vectorul "requested_files". Dupa citire fisierele si hash-urile sunt 
+trimise catre tracker care le salveaza in mapul sau "files" si salveaza cine
+este seed pentru fiecare fisier. Dupa primirea tuturor fisierelor, tracker-ul 
+anunta toti clientii ca pot incepe download-ul.
+
+2. Comunicare tracker-client
+
+De fiecare data cand un client incepe descarcarea interogheaza tracker-ul
+legat de lista de peers pentru fisierul respectiv, cat si lista de hash-uri ale
+acestuia, pentru a face ulterior verificarea. La inceperea acestui download
+tracker-ul updateaza lista de peers pentru acest fisier cu clientul ce a facut
+interogarea. 
+
+Periodic, clientul interogheaza tracker-ul de lista updatata de peers pentru 
+fisierul respectiv. 
+
+Dupa ce a terminat de descarcat fisierul, clientul trimite tracker-ului un 
+mesaj pentru a-l anunta si printeaza hash-urile in fisierul de output. 
+Cand a terminat de descarcat toate fisierele, clientul anunta tracker-ul 
+de acest fapt, iar el decrementeaza numarul de clienti care inca descarca. 
+
+Cand au terminat toti de descarcat tracker-ul le trimite un mesaj tuturor sa 
+incheie upload-ul.
+
+3. Comunicare client-client
+
+Dupa ce a primit de la tracker lista de peers, fiecare client incepe si ii 
+interogheaza pe restul, excluzandu-se pe sine de cate un segment in parte. 
+Pentru a balansa sarcinile cat mai egal, clientii intreaba mai intai primul
+peer, apoi al doilea si tot asa, in cerc, excluzandu-se pe sine. In cazul in
+care un peer nu detine segmentul dorit, sau trimite un segment prost, se
+interogheaza urmatorul peer pentru acelasi segment. La primirea unui segment
+verificat, acesta este salvat tot in mapul "files".

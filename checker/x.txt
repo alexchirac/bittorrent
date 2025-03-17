@@ -1,0 +1,450 @@
+Tue Jan  7 20:24:54 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:00 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:06 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:12 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:18 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:24 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:30 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:36 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:42 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:47 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:53 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:25:59 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:04 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:10 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:16 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:22 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:27 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:33 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:39 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:45 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:51 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:26:56 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:02 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:08 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:14 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:19 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:25 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:30 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:36 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
+Tue Jan  7 20:27:42 EET 2025
+
+Se ruleaza testul 1...
+OK
+
+Se ruleaza testul 2...
+OK
+
+Se ruleaza testul 3...
+OK
+
+Se ruleaza testul 4...
+OK
+
+Total: 40/40
