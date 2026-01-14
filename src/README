@@ -1,41 +1,105 @@
-# Copyright Chirac Alexandru-Stefan 333CA
+# BitNet - Distributed P2P File Sharing System
 
-TEMA 2 - APD
+## Overview
 
-1. Initializare
+BitNet is a distributed peer-to-peer file sharing system using MPI for inter-process communication and pthreads for multi-threaded operations. It implements a tracker-based architecture similar to BitTorrent for efficient file distribution across a network of peers.
 
-La inceput fiecare proces isi citeste fisierul de intrare si salveaza 
-fisierele detinute in mapul "files", iar fisierele pe care si le doreste
-in vectorul "requested_files". Dupa citire fisierele si hash-urile sunt 
-trimise catre tracker care le salveaza in mapul sau "files" si salveaza cine
-este seed pentru fiecare fisier. Dupa primirea tuturor fisierelor, tracker-ul 
-anunta toti clientii ca pot incepe download-ul.
+## Architecture
 
-2. Comunicare tracker-client
+### Components
 
-De fiecare data cand un client incepe descarcarea interogheaza tracker-ul
-legat de lista de peers pentru fisierul respectiv, cat si lista de hash-uri ale
-acestuia, pentru a face ulterior verificarea. La inceperea acestui download
-tracker-ul updateaza lista de peers pentru acest fisier cu clientul ce a facut
-interogarea. 
+1. **Tracker** (MPI Rank 0)
+   - Maintains file metadata and chunk hashes
+   - Keeps track of peer lists for each file
+   - Coordinates peer discoveries for downloaders
 
-Periodic, clientul interogheaza tracker-ul de lista updatata de peers pentru 
-fisierul respectiv. 
+2. **Peer Nodes** (MPI Ranks 1+)
+   - Download requested files from other peers
+   - Upload files to peers requesting them
+   - Concurrent operations via multi-threading
 
-Dupa ce a terminat de descarcat fisierul, clientul trimite tracker-ului un 
-mesaj pentru a-l anunta si printeaza hash-urile in fisierul de output. 
-Cand a terminat de descarcat toate fisierele, clientul anunta tracker-ul 
-de acest fapt, iar el decrementeaza numarul de clienti care inca descarca. 
+### Message Types
 
-Cand au terminat toti de descarcat tracker-ul le trimite un mesaj tuturor sa 
-incheie upload-ul.
+- **TRACKER_TAG (0)**: Client-tracker communication for peer discovery and file metadata
+- **INTER_PEER_TAG (1)**: Peer-to-peer requests for file chunks
+- **CHUNK_TAG (2)**: Actual chunk data transfer between peers
 
-3. Comunicare client-client
+## Protocol Details
 
-Dupa ce a primit de la tracker lista de peers, fiecare client incepe si ii 
-interogheaza pe restul, excluzandu-se pe sine de cate un segment in parte. 
-Pentru a balansa sarcinile cat mai egal, clientii intreaba mai intai primul
-peer, apoi al doilea si tot asa, in cerc, excluzandu-se pe sine. In cazul in
-care un peer nu detine segmentul dorit, sau trimite un segment prost, se
-interogheaza urmatorul peer pentru acelasi segment. La primirea unui segment
-verificat, acesta este salvat tot in mapul "files".
+### 1. Initialization Phase
+
+1. Each peer process reads its configuration file containing:
+   - List of files it owns with their chunk hashes
+   - List of files it wants to download
+
+2. Peers send file information to tracker:
+   - File names and chunk hashes
+   - Register as seed for owned files
+
+3. Tracker collects all file metadata from all peers
+
+4. Once tracker receives all data, it signals peers to begin downloads
+
+### 2. Download Phase
+
+1. For each requested file:
+   - Peer queries tracker for file metadata (chunk hashes)
+   - Peer queries tracker for peer list (other peers with chunks)
+
+2. Peer downloads chunks:
+   - Requests chunks from peers in round-robin order
+   - Verifies downloaded chunks against known hashes
+   - Retries with next peer if verification fails
+
+3. Peer list updates:
+   - Tracker updates peer list every 10 chunks
+   - Allows tracking of new seeds joining
+
+4. Chunk Download Loop:
+   - Select peer in round-robin fashion
+   - Send chunk request (file name + chunk index)
+   - Receive chunk data and verify hash
+   - Accept chunk if hash matches, otherwise retry
+
+### 3. Completion Phase
+
+1. After all chunks downloaded:
+   - Write chunks to output file (format: hash per line)
+   - Notify tracker of completion
+
+2. Tracker monitoring:
+   - Waits for all peers to complete downloads
+   - Signals shutdown when all peers done
+
+## File Formats
+
+### Input File Format
+
+```
+<num_owned_files> <num_requested_files>
+<owned_filename_1> <hash_1>
+<owned_filename_2> <hash_2>
+...
+<requested_filename_1>
+<requested_filename_2>
+...
+```
+
+### Output File Format
+
+```
+<hash_1>
+<hash_2>
+<hash_3>
+...
+```
+
+Output files named: `client<rank>_<filename>`
+
+## Key Design Decisions
+
+1. **Hash Verification**: All downloaded chunks must match known hashes from tracker
+2. **Load Balancing**: Round-robin peer selection prevents overloading single peers
+3. **Periodic Updates**: Peer lists updated every 10 chunks to handle dynamic peers
+4. **Mutex Protection**: File data structures protected for safe concurrent access
+5. **Graceful Failure**: Invalid chunks trigger retry with different peer
